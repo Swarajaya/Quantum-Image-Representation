@@ -1,0 +1,30 @@
+brain_tumor:
+  FRQI depth: 18
+  FRQI qubits: 3
+  NEQR depth: 8
+  NEQR qubits: 4
+
+nist:
+  FRQI depth: 18
+  FRQI qubits: 3
+  NEQR depth: 8
+  NEQR qubits: 4
+
+sar_iceye:
+  FRQI depth: 18
+  FRQI qubits: 3
+  NEQR depth: 8
+  NEQR qubits: 4
+
+sar_earthdata:
+  FRQI depth: 18
+  FRQI qubits: 3
+  NEQR depth: 8
+  NEQR qubits: 4
+
+ssdd_ship:
+  FRQI depth: 18
+  FRQI qubits: 3
+  NEQR depth: 8
+  NEQR qubits: 4
+
