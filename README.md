@@ -168,7 +168,10 @@ Swarajaya Singh Sawant
 Department of Artificial Intelligence and Machine Learning
 COER University
 📧 Email: swarajayasawant19@gmail.com
+Minor update to documentation
+
 
 🏷️ Keywords
+
 
 Quantum Image Processing, FRQI, NEQR, MCQI, QRAM, Amplitude Encoding, Hybrid Quantum Models, HA-QIR
