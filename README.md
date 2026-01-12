@@ -1,177 +1,117 @@
-Quantum Image Representation – Comparative Study and Hybrid HA-QIR
-📌 Project Overview
+ Quantum Image Representation: A Comparative Study with Hybrid Adaptive Encoding (HA-QIR)
 
-This project presents a comparative experimental study of quantum image representation techniques and proposes a novel Hybrid Adaptive Quantum Image Representation (HA-QIR) method. The study evaluates how different quantum encoding schemes represent classical images in quantum states under limited quantum resources.
+This repository contains the complete implementation and experimental setup for the research project **"Quantum Image Representation: A Comparative Study with Hybrid Adaptive Encoding (HA-QIR)"**.
 
-The work focuses on resource efficiency, scalability, and information preservation, which are critical challenges in near-term quantum image processing.
+The work presents a comparative evaluation of multiple quantum image representation techniques and proposes a novel hybrid framework designed for efficient and scalable quantum image encoding under NISQ-era constraints.
 
-🧠 Key Objectives
+---
 
-Implement and analyze major Quantum Image Representation (QIR) models
+## 📌 Project Overview
 
-Compare models using quantum resource metrics
+Quantum image representation plays a crucial role in quantum image processing, enabling classical images to be encoded into quantum states for further quantum operations. Existing methods often suffer from high qubit requirements, increased circuit depth, or loss of image fidelity.
 
-Perform basic quantum image operations
+This project:
+- Implements and compares classical quantum image representation techniques.
+- Introduces **HA-QIR**, a Hybrid Adaptive Quantum Image Representation framework.
+- Evaluates performance using real-world datasets under identical experimental conditions.
 
-Propose a novel hybrid encoding strategy (HA-QIR) to balance fidelity and efficiency
+---
 
-🔬 Quantum Image Representation Models Implemented
+## 🧠 Implemented Quantum Image Representation Techniques
 
-The following models are implemented and evaluated:
+The following quantum image representation models are implemented and evaluated:
 
-FRQI (Flexible Representation of Quantum Images)
+- **FRQI (Flexible Representation of Quantum Images)**
+- **NEQR (Novel Enhanced Quantum Representation)**
+- **MCQI (Multi-Channel Quantum Image Representation)**
+- **QRAM-based Encoding**
+- **Amplitude Encoding**
+- **Proposed HA-QIR (Hybrid Adaptive Quantum Image Representation)**
 
-Encodes pixel intensity using rotation angles
+---
 
-Simple but probabilistic and less scalable
+## 🧩 Proposed Method: HA-QIR
 
-NEQR (Novel Enhanced Quantum Representation)
+HA-QIR is a hybrid encoding framework that:
+- Separates images into **Region of Interest (ROI)** and background.
+- Applies **MCQI encoding** to ROI for high-fidelity representation.
+- Uses **amplitude encoding** for background regions to reduce qubit and circuit overhead.
+- Combines both representations using adaptive weighted superposition.
 
-Encodes pixel values directly into basis states
+This approach achieves an improved trade-off between accuracy, scalability, and quantum resource utilization.
 
-Exact representation with higher qubit cost
+---
 
-MCQI (Multi-Channel Quantum Image Representation)
+## 📊 Datasets Used
 
-Supports RGB images
+Only datasets actually used in this project are included:
 
-Efficient balance between fidelity and resources
+- **MNIST** – handwritten digit images
+- **Brain Tumor MRI Dataset**
+- **SAR Earth Data**
+- **SAR Iceye Dataset**
+- **SAR Ship Detection Dataset (SSDD)**
 
-QRAM-based Encoding
+All datasets were used strictly for **representation and simulation purposes**, not for classical learning or classification.
 
-Uses quantum random access memory concepts
+---
 
-Enables fast pixel access
+## 🧪 Experimental Setup
 
-Amplitude Encoding
+- Programming Language: **Python**
+- Quantum Framework: **Qiskit**
+- Image Processing: **NumPy, OpenCV, Matplotlib**
+- Execution Environment: **Quantum simulators (NISQ-compatible)**
+- Image Preprocessing:
+  - Grayscale conversion
+  - Fixed \(N \times N\) resizing
+  - Pixel normalization
 
-Extremely low qubit usage
+All methods were evaluated under identical conditions to ensure fair comparison.
 
-Suffers from information loss and scalability issues
+---
 
-🚀 Proposed Novel Method: HA-QIR
+## 📈 Evaluation Metrics
 
-Hybrid Adaptive Quantum Image Representation (HA-QIR) combines strengths of multiple encodings:
+- Qubit count
+- Quantum circuit depth
+- Encoding fidelity
+- Scalability
+- Resource efficiency
 
-Region of Interest (ROI) → MCQI (high fidelity)
+---
 
-Background regions → Amplitude Encoding (low qubits)
+## 📁 Repository Structure
 
-Position information → QRAM-style indexing
-
-This adaptive strategy:
-
-Reduces qubit count
-
-Lowers circuit depth
-
-Preserves important image features
-
-📊 Datasets Used
-
-Representative samples from the following public benchmark datasets were used:
-
-Brain Tumor MRI Dataset (medical imaging)
-
-MNIST (handwritten digits)
-
-SAR Earth Observation Dataset
-
-ICEYE SAR Dataset
-
-SSDD (SAR Ship Detection Dataset)
-
-Note: Images were resized to small dimensions (e.g., 2×2, 4×4) to ensure quantum simulation feasibility.
-
-🧪 Experimental Setup
-
-Programming Language: Python
-
-Quantum Framework: Qiskit
-
-Execution: Classical quantum simulator
-
-Preprocessing: Grayscale conversion, normalization, resizing
-
-📈 Evaluation Metrics
-
-Each model is evaluated using:
-
-Qubit requirements
-
-Encoding execution time
-
-Gate count
-
-Circuit depth
-
-Scalability
-
-Information loss
-
-🧩 Quantum Image Operations Performed
-
-After encoding, the following quantum image operations are demonstrated:
-
-Quantum Geometric Transformations (rotation, coordinate mapping)
-
-Quantum Image Flipping (horizontal and vertical)
-
-Quantum Image Filtering (basic interference-based filtering)
-
-📂 Project Structure (Suggested)
-Quantum-Image-Representation/
-│
-├── data/                 # Sample images (datasets)
-├── circuits/             # Quantum circuit implementations
-├── models/               # FRQI, NEQR, MCQI, QRAM, Amplitude
-├── ha_qir/               # Proposed HA-QIR implementation
-├── results/              # Output images and plots
-├── paper/                # Research paper (IEEE format)
+├── data/ # Datasets used in the study
+├── outputs/ # Generated quantum states and visualizations
+├── src/ # Source code for all encoding techniques
+│ ├── frqi.py
+│ ├── neqr.py
+│ ├── mcqi.py
+│ ├── amplitude.py
+│ ├── haqir.py
+├── results/ # Experimental results and analysis
+├── requirements.txt # Required Python dependencies
 └── README.md
 
-📌 Key Contributions
+yaml
+Copy code
 
-Comprehensive comparison of five quantum image representation techniques
+---
 
-Experimental evaluation across multiple datasets
+## 🚀 How to Run
 
-Proposal of a resource-aware hybrid encoding strategy
+1. Clone the repository:
+```bash
+git clone https://github.com/USERNAME/quantum-image-representation-haqir.git
+Install dependencies:
 
-Demonstration of quantum image operations
+bash
+Copy code
+pip install -r requirements.txt
+Run desired encoding script from src/.
 
-Suitable for near-term (NISQ) quantum devices
+📜 License
+This project is intended for academic and research purposes.
 
-🧪 Current Status
-
-✅ Implementations completed
-
-✅ Comparative analysis performed
-
-✅ Novel technique proposed
-
-✅ Research paper draft prepared
-
-🔄 Extension possible to real quantum hardware
-
-📄 Publication
-
-This work is prepared as a research paper suitable for:
-
-arXiv (free preprint)
-
-IEEE / Springer / ACM conferences (subject to submission)
-
-👤 Author
-
-Swarajaya Singh Sawant
-Department of Artificial Intelligence and Machine Learning
-COER University
-📧 Email: swarajayasawant19@gmail.com
-Minor update to documentation
-
-
-🏷️ Keywords
-
-
-Quantum Image Processing, FRQI, NEQR, MCQI, QRAM, Amplitude Encoding, Hybrid Quantum Models, HA-QIR
